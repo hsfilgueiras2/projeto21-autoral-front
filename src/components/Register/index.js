@@ -1,7 +1,7 @@
 import { RegisterStyled } from "../../layout/register/RegisterStyled"
 import {Link, useNavigate} from "react-router-dom"
 
-export default function RegisterScreen (){
+export default function RegisterScreen(){
     const navigate = useNavigate();
     function submitRegister(event){
         event.preventDefault();
