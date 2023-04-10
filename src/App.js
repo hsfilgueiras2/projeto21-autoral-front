@@ -7,14 +7,20 @@ import {
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Home from './Pages/Home';
+import GlobalStyle from './GlobalStyles';
+import { useState } from 'react';
 export default function App(){
+    const [token, setToken] = useState()
     return(
+        <>
+        <GlobalStyle/>
         <Router>
             <Routes>
-                <Route path="/" element={<Home/>}></Route>
-                <Route path="/login" element={<Login/>}></Route>
+                <Route token={token} path="/" element={<Home/>}></Route>
+                <Route setToken={(e)=>setToken(e)} path="/login" element={<Login/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
             </Routes>
         </Router>
+        </>
     )
 }

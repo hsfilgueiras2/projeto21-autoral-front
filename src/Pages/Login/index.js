@@ -1,7 +1,7 @@
 import LoginScreen from "../../components/Login";
-export default function Login(){
+export default function Login({setToken}){
 
     return(
-        <LoginScreen/>
+        <LoginScreen setToken={setToken}/>
     )
 }
